@@ -2,9 +2,105 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Git</title>
+    <meta name="author" content="Диана Дудорова">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Место</title>
+    <link rel="stylesheet" href="./page/index.css">
 </head>
-<body>
+<body class="page">
+    <header class="header">
+        <a href="#"><img src="./images/logo.svg" alt="Логотип" class="logo"></a>
+        <div class="header__line"></div>
+    </header>
+    <main class="content">
+        <section class="profile">
+            <div class="profile__container">
+                <img src="./images/scientist.svg" alt="Учёный" class="profile__image">
+                <div class="profile__info">
+                    <div class="profile__name">
+                        <h1 class="profile__title">Жак-Ив Кусто</h1>
+                        <button class="profile__edit-button" type="button"></button>
+                    </div>
+                <p class="profile__position">Исследователь океана</p> 
+                </div>
+            </div>
+            <button class="profile__add-button" type="button"></button>
+        </section>
+        <section class="elements-content">
+           <ul class="elements">
+            <li class="elements__card">
+                <img src="./images/kirill-pershin-karachaevsk.jpg" alt="Карачаевск" class="elements__image">
+                <div class="elements__title-wrapper">
+                <h2 class="elements__title">Карачаевск</h2>
+                    <div class="elements__like-wrapper">
+                        <button class="elements__like-button" type="button"></button>
+                    </div>
+                </div>
+            </li>
+            <li class="elements__card">
+                <img src="./images/kirill-pershin-elbrus.svg" alt="Эльбрус" class="elements__image">
+                <div class="elements__title-wrapper">
+                <h2 class="elements__title">Гора Эльбрус</h2>
+                    <div class="elements__like-wrapper">
+                        <button class="elements__like-button" type="button"></button>
+                    </div>
+                </div>
+            </li>
+            <li class="elements__card">
+                <img src="./images/kirill-pershin-dombai.svg" alt="Домбай" class="elements__image">
+                <div class="elements__title-wrapper">
+                <h2 class="elements__title">Домбай</h2>
+                    <div class="elements__like-wrapper">
+                        <button class="elements__like-button" type="button"></button>
+                    </div>
+                </div>
+            </li>
+            <li class="elements__card">
+                <img src="./images/kirill-pershin-elbrus.svg" alt="Эльбрус" class="elements__image">
+                <div class="elements__title-wrapper">
+                <h2 class="elements__title">Гора Эльбрус</h2>
+                    <div class="elements__like-wrapper">
+                        <button class="elements__like-button" type="button"></button>
+                    </div>
+                </div>
+            </li>
+            <li class="elements__card">
+                <img src="./images/kirill-pershin-dombai.svg" alt="Домбай" class="elements__image">
+                <div class="elements__title-wrapper">
+                <h2 class="elements__title">Домбай</h2>
+                    <div class="elements__like-wrapper">
+                        <button class="elements__like-button" type="button"></button>
+                    </div>
+                </div>
+            </li>
+            <li class="elements__card">
+                <img src="./images/kirill-pershin-karachaevsk.jpg" alt="Карачаевск" class="elements__image">
+                <div class="elements__title-wrapper">
+                <h2 class="elements__title">Карачаево Ч...</h2>
+                    <div class="elements__like-wrapper">
+                        <button class="elements__like-button" type="button"></button>
+                    </div>
+                </div>
+            </li>
+           </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
+    </footer>
 
+    <div class="popup">
+        <div class="popup__container">
+          <form class="popup__form" name="popupForm">
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <input type="text" name="name" class="popup__input popup__input_data-name" id="name-input" placeholder="Имя" minlength="2" maxlength="40" pattern="^[a-zA-Zа-яА-я-\s]+$" required>
+            <input type="text" name="position" class="popup__input popup__input_data-about" id="position-input" placeholder="Профессия" minlength="2" pattern="^[a-zA-Zа-яА-я-\s]+$" maxlength="200" required>
+            <button type="submit" class="popup__button">Сохранить</button>
+          </form>
+          <button type="button" class="popup__close-button" area-label="Закрыть окно"></button>
+        </div>
+      </div> 
+
+      <script src="./scripts/popup.js"></script>
 </body>
 </html>

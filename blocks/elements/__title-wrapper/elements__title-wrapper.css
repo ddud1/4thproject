@@ -1,0 +1,8 @@
+.elements__title-wrapper {
+    align-items: center;
+    margin: 25px 15px 31px 21px;
+    display: flex;
+    justify-content: space-between;
+    height: 29px;
+    text-align: center;
+}
