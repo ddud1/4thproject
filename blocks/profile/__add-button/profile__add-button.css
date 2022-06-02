@@ -4,15 +4,12 @@
     height: 50px;
     width: 150px;
     padding: 0;
-    width: 150px;
-    height: 50px;
     border: 2px solid #fff;
     box-sizing: border-box;
     border-radius: 2px;
     margin: 4% 0 0;
     outline: none;
     transition: all .1s linear;
-    cursor: pointer;
 }
 
 .profile__add-button:hover {
