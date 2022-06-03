@@ -9,13 +9,13 @@
 </head>
 <body class="page">
     <header class="header">
-        <a href="#"><img src="./images/logo-header.png" alt="Логотип" class="logo"></a>
+        <a href="#"><img src="./images/logo.svg" alt="Логотип" class="logo"></a>
         <div class="header__line"></div>
     </header>
     <main class="content">
         <section class="profile">
             <div class="profile__container">
-                <img src="./images/scientist.png" alt="Учёный" class="profile__image">
+                <img src="./images/scientist.svg" alt="Учёный" class="profile__image">
                 <div class="profile__info">
                     <div class="profile__name">
                         <h1 class="profile__title">Жак-Ив Кусто</h1>
@@ -29,57 +29,45 @@
         <section class="elements-content">
            <ul class="elements">
             <li class="elements__card">
-                <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="elements__image">
+                <img src="./images/karachaevsk.svg" alt="Карачаевск" class="elements__image">
                 <div class="elements__title-wrapper">
                 <h2 class="elements__title">Карачаевск</h2>
-                    <div class="elements__like-wrapper">
                         <button class="elements__like-button" type="button"></button>
-                    </div>
                 </div>
             </li>
             <li class="elements__card">
-                <img src="./images/elbrus.jpg" alt="Эльбрус" class="elements__image">
+                <img src="./images/elbrus.svg" alt="Эльбрус" class="elements__image">
                 <div class="elements__title-wrapper">
                 <h2 class="elements__title">Гора Эльбрус</h2>
-                    <div class="elements__like-wrapper">
                         <button class="elements__like-button" type="button"></button>
-                    </div>
                 </div>
             </li>
             <li class="elements__card">
-                <img src="./images/dombai.jpg" alt="Домбай" class="elements__image">
+                <img src="./images/dombai.svg" alt="Домбай" class="elements__image">
                 <div class="elements__title-wrapper">
                 <h2 class="elements__title">Домбай</h2>
-                    <div class="elements__like-wrapper">
                         <button class="elements__like-button" type="button"></button>
-                    </div>
                 </div>
             </li>
             <li class="elements__card">
-                <img src="./images/elbrus.jpg" alt="Эльбрус" class="elements__image">
+                <img src="./images/elbrus.svg" alt="Эльбрус" class="elements__image">
                 <div class="elements__title-wrapper">
                 <h2 class="elements__title">Гора Эльбрус</h2>
-                    <div class="elements__like-wrapper">
                         <button class="elements__like-button" type="button"></button>
-                    </div>
                 </div>
             </li>
             <li class="elements__card">
-                <img src="./images/dombai.jpg" alt="Домбай" class="elements__image">
+                <img src="./images/dombai.svg" alt="Домбай" class="elements__image">
                 <div class="elements__title-wrapper">
                 <h2 class="elements__title">Домбай</h2>
-                    <div class="elements__like-wrapper">
                         <button class="elements__like-button" type="button"></button>
-                    </div>
                 </div>
             </li>
             <li class="elements__card">
-                <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="elements__image">
+                <img src="./images/karachaevsk.svg" alt="Карачаевск" class="elements__image">
                 <div class="elements__title-wrapper">
                 <h2 class="elements__title">Карачаево Ч...</h2>
-                    <div class="elements__like-wrapper">
                         <button class="elements__like-button" type="button"></button>
-                    </div>
                 </div>
             </li>
            </ul>
@@ -91,7 +79,7 @@
 
     <div class="popup">
         <div class="popup__container">
-          <form class="popup__form" name="popupForm">
+          <form class="popup__form" name="popup-Form">
             <h2 class="popup__title">Редактировать профиль</h2>
             <input type="text" name="name" class="popup__input popup__input_data-name" id="name-input" placeholder="Имя" minlength="2" maxlength="40" pattern="^[a-zA-Zа-яА-я-\s]+$" required>
             <input type="text" name="position" class="popup__input popup__input_data-about" id="position-input" placeholder="Профессия" minlength="2" pattern="^[a-zA-Zа-яА-я-\s]+$" maxlength="200" required>
@@ -102,5 +90,6 @@
       </div> 
 
       <script src="./scripts/popup.js"></script>
+      <script src="./scripts/like-active.js"></script>
 </body>
 </html>
