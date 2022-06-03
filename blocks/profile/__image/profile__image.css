@@ -5,7 +5,13 @@
     margin-right: 30px;
 }
 
-@media screen and (max-width: 915px) {
+@media screen and (max-width: 730px) {
+    .profile__image {
+     margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 670px) {
     .profile__image {
      margin: 0;
     }

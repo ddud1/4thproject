@@ -10,6 +10,8 @@
     outline: none;
     transition: all .1s linear;
     cursor: pointer;
+    display: inline-block;
+    flex-shrink: 0;
 }
 
 @media screen and (max-width:670px) {

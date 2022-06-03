@@ -4,6 +4,9 @@
     flex-direction: column;
     margin: 22px 0 0 0;
     justify-content: flex-start;
+    overflow: hidden;
+    max-width: 65%;
+    text-overflow: ellipsis;
 }
 
 @media screen and (max-width:670px) {
