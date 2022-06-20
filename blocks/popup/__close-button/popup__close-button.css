@@ -14,7 +14,28 @@
     top: -348px;
 }
 
+.popup__close-buttonAdd {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    outline: none;
+    background: url(../../../images/close-icon.svg);
+    width: 32px;
+    height: 32px;
+    border: none;
+    position: relative;
+    right: -438px;
+    top: -348px;
+}
+
 .popup__close-button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.popup__close-buttonAdd:hover {
     opacity: 0.6;
     cursor: pointer;
 }

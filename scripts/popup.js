@@ -1,6 +1,7 @@
 const editButton = document.querySelector('.profile__edit-button') // попап для редактирования профиля
 const popup = document.querySelector('.popup')
-const closeButton = document.querySelector('.popup__close-button')
+const closeButton = document.querySelector('.popup__close-button') // попап для закрытия редактирования профиля
+
 
 const nameElement = document.querySelector('.profile__title')
 const nameFieldElement = document.querySelector('.popup__input_data-name')
@@ -9,8 +10,6 @@ const aboutElement = document.querySelector ('.profile__position')
 const aboutFieldElement = document.querySelector('.popup__input_data-about')
 
 const formElement = document.querySelector('.popup__form')
-
-const likeActive = document.querySelectorAll('.elements__like-button')
 
 
 editButton.addEventListener('click', function() {
