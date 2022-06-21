@@ -14,3 +14,18 @@
     top: -39px;
     cursor: pointer;
 }
+
+.popup__close-buttonImage:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+@media screen and (max-width:670px) {
+    .popup__close-buttonImage {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    right: 0px;
+    top: -36px;
+    }
+}

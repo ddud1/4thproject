@@ -45,7 +45,17 @@
     width: 20px;
     height: 20px;
     right: -262px;
-    top: -346px;
+    top: -352px;
+    background-size: contain;
+    }
+}
+
+@media screen and (max-width:670px) {
+    .popup__close-buttonAdd {
+    width: 20px;
+    height: 20px;
+    right: -262px;
+    top: -328px;
     background-size: contain;
     }
 }
