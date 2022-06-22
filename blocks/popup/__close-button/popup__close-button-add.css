@@ -1,4 +1,4 @@
-.popup__close-buttonImage {
+.popup__close-button-add {
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,23 +9,22 @@
     width: 32px;
     height: 32px;
     border: none;
-    position: absolute;
-    right: -39px;
-    top: -39px;
-    cursor: pointer;
+    position: relative;
+    right: -438px;
+    top: -328px;
 }
 
-.popup__close-buttonImage:hover {
+.popup__close-button-add:hover {
     opacity: 0.6;
     cursor: pointer;
 }
 
 @media screen and (max-width:670px) {
-    .popup__close-buttonImage {
+    .popup__close-button-add {
     width: 20px;
     height: 20px;
+    right: -262px;
+    top: -328px;
     background-size: contain;
-    right: 0px;
-    top: -36px;
     }
 }

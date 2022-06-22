@@ -1,0 +1,30 @@
+.popup__close-button-edit {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    outline: none;
+    background: url(../../../images/close-icon.svg);
+    width: 32px;
+    height: 32px;
+    border: none;
+    position: relative;
+    right: -438px;
+    top: -348px;
+}
+
+.popup__close-button-edit:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+@media screen and (max-width:670px) {
+    .popup__close-button-edit {
+    width: 20px;
+    height: 20px;
+    right: -262px;
+    top: -352px;
+    background-size: contain;
+    }
+}
