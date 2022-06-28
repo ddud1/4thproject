@@ -1,6 +1,6 @@
 .form__input-error_active {
     margin: 0px;
-    padding: 0px;
+    padding-top: 5px;
     color: #FF0000;
     font-weight: 400;
     font-size: 12px;
