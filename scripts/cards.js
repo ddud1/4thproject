@@ -15,6 +15,7 @@ const popupCaption = document.querySelector(".popup__caption");
 
 addButton.addEventListener("click", function () {
   openPopup(cardAdd);
+  enableValidation();
 });
 
 closeButtonAdd.addEventListener("click", function () {

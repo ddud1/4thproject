@@ -1,0 +1,9 @@
+.popup-type-add__submit_inactive{
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    opacity: 0.2;
+    border: 1px solid #000;
+    color: #000;
+}
