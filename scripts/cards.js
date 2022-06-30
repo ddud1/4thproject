@@ -13,9 +13,24 @@ const popupImageOpen = document.querySelector(".popup_type_open-image");
 const popupImage = document.querySelector(".popup__image");
 const popupCaption = document.querySelector(".popup__caption");
 
+cardAdd.addEventListener('click', (event)=>{
+  if(event.target === cardAdd){
+  closePopup(cardAdd);
+  }
+});
+
+popupImageOpen.addEventListener('click', (event)=>{
+  if(event.target === popupImageOpen){
+  closePopup(popupImageOpen);
+  }
+});
+
 addButton.addEventListener("click", function () {
   openPopup(cardAdd);
-  enableValidation();
+  cardNameFieldElement.value = '';
+  linkFieldElement.value = '';
+  hideInputError(formAddCardElement,cardNameFieldElement, config);
+  hideInputError(formAddCardElement,linkFieldElement, config);
 });
 
 closeButtonAdd.addEventListener("click", function () {
@@ -29,28 +44,23 @@ for (let i = 0; i < initialCards.length; i++) {
 
 function createCard(name, link) {
   const cardLi = cardTemplate.querySelector(".elements__card").cloneNode(true);
-  cardLi.querySelector(".elements__image").src = link;
-  cardLi.querySelector(".elements__image").alt = name;
+  const imageLi = cardLi.querySelector(".elements__image");
+  imageLi.src = link;
+  imageLi.alt = name;
 
   cardLi.querySelector(".elements__title").textContent = name;
 
   const buttonLike = cardLi.querySelector(".elements__like-button");
 
   buttonLike.addEventListener("click", function () {
-    if (buttonLike.classList.contains("elements__like-button_active")) {
-      buttonLike.classList.remove("elements__like-button_active");
-    } else {
-      buttonLike.classList.add("elements__like-button_active");
-    }
+    buttonLike.classList.toggle("elements__like-button_active");
   });
 
   const trashButtonLi = cardLi.querySelector(".elements__trash-button");
 
   trashButtonLi.addEventListener("click", function () {
-    trashButtonLi.closest('ul').removeChild(trashButtonLi.closest('li'));
+    trashButtonLi.closest('.elements__card').remove();
   });
-
-  const imageLi = cardLi.querySelector(".elements__image");
 
   imageLi.addEventListener("click", function () {
     openPopup(popupImageOpen);
@@ -69,6 +79,9 @@ formAddCardElement.addEventListener("submit", function (event) {
   ulCards.prepend(newCard);
 
   formAddCardElement.reset();
+  const inputList = Array.from(formAddCardElement.querySelectorAll('.popup__input'));
+  const buttonElement = formAddCardElement.querySelector('.popup__button');
+  toggleButtonState(inputList, buttonElement, formAddCardElement.id);
 }); /* попап-форма для добавления карточки */
 
 closeButtonImage.addEventListener("click", function () {

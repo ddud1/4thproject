@@ -36,26 +36,26 @@
 
     <div class="popup popup_type_edit">
         <div class="popup__container">
-          <form class="popup__form popup__form_type_edit" name="popup-form" id="popup__edit" novalidate >
+          <form class="popup__form popup__form_type_edit" name="popup-edit-form" id="popup__edit" novalidate >
             <h2 class="popup__title">Редактировать профиль</h2>
             <input type="text" name="name" class="popup__input popup__input_data-name popup__input_type_error" id="name-input" placeholder="Имя" minlength="2" maxlength="40" pattern="^[a-zA-Zа-яА-я-\s]+$" required>
-            <span class="popup__input-error popup__input-error_data-name name-input-error"></span>
+            <span class="popup__input-error popup__input-error name-input-error"></span>
             <input type="text" name="position" class="popup__input popup__input_data-about" id="position-input" placeholder="Профессия" minlength="2" maxlength="200" pattern="^[a-zA-Zа-яА-я-\s]+$" required>
-            <span class="popup__input-error popup__input-error_data-about position-input-error"></span>
+            <span class="popup__input-error popup__input-error position-input-error"></span>
             <button type="submit" class="popup__button popup__edit-button">Сохранить</button>
           </form>
-          <button type="button" class="popup__close-button popup__close-button-edit"></button>
+          <button type="button" class="popup__close-button "></button>
         </div>
       </div> 
 
       <div class="popup popup_type_add-card">
         <div class="popup__container">
-          <form class="popup__form popup__form_add-card" name="popup-form" id="popup__add" novalidate>
+          <form class="popup__form popup__form_add-card" name="popup-add-sform" id="popup__add" novalidate>
             <h2 class="popup__title">Новое место</h2>
             <input type="text" name="name" class="popup__input popup__input_card-name popup__input_type_error" id="cardname-input" placeholder="Название" minlength="2" maxlength="40" pattern="^[a-zA-Zа-яА-я-\s]+$" required>
-            <span class="popup__input-error popup__input-error_card-name cardname-input-error"></span>
+            <span class="popup__input-error popup__input-error cardname-input-error"></span>
             <input type="url" name="link" class="popup__input popup__input_card-link" id="cardlink-input" placeholder="Ссылка на картинку" required>
-            <span class="popup__input-error popup__input-error_card-link cardlink-input-error"></span>
+            <span class="popup__input-error popup__input-error cardlink-input-error"></span>
             <button type="submit" class="popup__button popup__add-button">Создать</button>
           </form>
           <button type="button" class="popup__close-button popup__close-button-add"></button>
@@ -63,7 +63,7 @@
       </div> 
 
       <div class="popup popup_type_open-image">
-        <div class="popup__image-container popup__overlay">
+        <div class="popup__image-container">
             <img class="popup__image" src="#" alt="#">
             <h2 class="popup__caption"></h2>
             <button type="button" class="popup__close-button popup__close-button-image"></button>

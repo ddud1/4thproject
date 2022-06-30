@@ -3,7 +3,3 @@
     border-bottom: 1px solid rgba(0,0,0,.2);
     outline-color: #86b9f0;
 }
-
-.popup__input:invalid {
-    border-bottom: 1px solid #FF0000;
-}

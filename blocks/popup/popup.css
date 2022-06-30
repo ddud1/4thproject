@@ -12,4 +12,5 @@
     background-color: rgba(0, 0, 0, 0.8);
     transition: visibility 0.2s, opacity 0.2s linear;
     z-index: 3;
+    position: fixed;
 }
