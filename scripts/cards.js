@@ -29,8 +29,7 @@ addButton.addEventListener("click", function () {
   openPopup(cardAdd);
   cardNameFieldElement.value = '';
   linkFieldElement.value = '';
-  hideInputError(formAddCardElement,cardNameFieldElement, config);
-  hideInputError(formAddCardElement,linkFieldElement, config);
+  resetError(formAddCardElement, config);
 });
 
 closeButtonAdd.addEventListener("click", function () {

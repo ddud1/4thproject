@@ -27,6 +27,7 @@ const closeEscPopup = (event) =>{
 
 function openPopup(popup) {
   popup.classList.add("popup_opened")
+  
   document.addEventListener('keydown', closeEscPopup);
 }
 
@@ -39,8 +40,7 @@ editButton.addEventListener("click", function () {
   openPopup(popupEdit);
   nameFieldElement.value = nameElement.textContent;
   aboutFieldElement.value = aboutElement.textContent; 
-  hideInputError(formEditElement,nameFieldElement, config);
-  hideInputError(formEditElement,aboutFieldElement, config);
+  resetError(formEditElement, config);
 });
 
 closeButtonEdit.addEventListener("click", function () {
