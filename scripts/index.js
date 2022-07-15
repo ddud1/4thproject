@@ -146,21 +146,23 @@ closeButtonAdd.addEventListener("click", function () {
   closePopup(cardAdd);
 });
 
+function createCard(name, link, cardTemplate, imagePopupClick, ulCards){
+  ulCards.prepend(new Card(name, link, cardTemplate, imagePopupClick).createCard());
+}
+
 for (let i = 0; i < initialCards.length; i++) {
-  const newCard = new Card(initialCards[i].name, initialCards[i].link, cardTemplate, imagePopupClick).createCard();
-  ulCards.prepend(newCard);
+  createCard(initialCards[i].name, initialCards[i].link, cardTemplate, imagePopupClick, ulCards);
 }
 
 formAddCardElement.addEventListener("submit", function (event) {
   closePopup(cardAdd);
   event.preventDefault();
-  const newCard = new Card(cardNameFieldElement.value, linkFieldElement.value, cardTemplate, imagePopupClick).createCard();
-  ulCards.prepend(newCard);
+  createCard(cardNameFieldElement.value, linkFieldElement.value, cardTemplate, imagePopupClick, ulCards);
 
   formAddCardElement.reset();
   const inputList = Array.from(formAddCardElement.querySelectorAll('.popup__input'));
   const buttonElement = formAddCardElement.querySelector('.popup__button');
-  toggleButtonState(inputList, buttonElement, formAddCardElement.id);
+  addCardFormValidator.toggleButtonState();
 }); /* попап-форма для добавления карточки */
 
 closeButtonImage.addEventListener("click", function () {
