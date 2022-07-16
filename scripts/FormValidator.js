@@ -4,17 +4,15 @@ export default class FormValidator {
     this._form = form;
     this._inputList = Array.from(this._form.querySelectorAll(this._config.popupInput));
     this._buttonElement = this._form.querySelector(`.${this._form.id}-button`);
-    this._formList = Array.from(document.querySelectorAll(config.popupForm));
   }
 
   _isValid(inputElement){
     if (!inputElement.validity.valid) {
       this._showInputError(inputElement);
-      this.toggleButtonState();
     } else {
       this._hideInputError(inputElement);
-      this.toggleButtonState();
     }
+    this.toggleButtonState();
   } 
 
   toggleButtonState(){
@@ -65,7 +63,7 @@ export default class FormValidator {
       });
    }
 
-    resetError(){
+   resetValidation(){
       this._inputList.forEach(inputElement => this._hideInputError(inputElement));
       this.toggleButtonState();
     }

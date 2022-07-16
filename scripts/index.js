@@ -40,9 +40,6 @@ const aboutFieldElement = document.querySelector(".popup__input_data-about");
 
 const formEditElement = document.querySelector(".popup__form_type_edit");
 
-nameFieldElement.value = nameElement.textContent;
-aboutFieldElement.value = aboutElement.textContent;
-
 popupEdit.addEventListener('click', (event)=>{
   if(event.target === popupEdit){
   closePopup(popupEdit);
@@ -70,7 +67,7 @@ editButton.addEventListener("click", function () {
   openPopup(popupEdit);
   nameFieldElement.value = nameElement.textContent;
   aboutFieldElement.value = aboutElement.textContent; 
-  editFormValidator.resetError();
+  editFormValidator.resetValidation();
 });
 
 closeButtonEdit.addEventListener("click", function () {
@@ -116,7 +113,7 @@ const popupImageOpen = document.querySelector(".popup_type_open-image");
 const popupImage = document.querySelector(".popup__image");
 const popupCaption = document.querySelector(".popup__caption");
 
-function imagePopupClick(name, link) {
+function handleCardClick(name, link) {
   openPopup(popupImageOpen);
   popupImage.src = link;
   popupImage.alt = name;
@@ -139,29 +136,27 @@ addButton.addEventListener("click", function () {
   openPopup(cardAdd);
   cardNameFieldElement.value = '';
   linkFieldElement.value = '';
-  addCardFormValidator.resetError();
+  addCardFormValidator.resetValidation();
 });
 
 closeButtonAdd.addEventListener("click", function () {
   closePopup(cardAdd);
 });
 
-function createCard(name, link, cardTemplate, imagePopupClick, ulCards){
-  ulCards.prepend(new Card(name, link, cardTemplate, imagePopupClick).createCard());
+function createCard(name, link, cardTemplate, handleCardClick, ulCards){
+  ulCards.prepend(new Card(name, link, cardTemplate, handleCardClick).createCard());
 }
 
 for (let i = 0; i < initialCards.length; i++) {
-  createCard(initialCards[i].name, initialCards[i].link, cardTemplate, imagePopupClick, ulCards);
+  createCard(initialCards[i].name, initialCards[i].link, cardTemplate, handleCardClick, ulCards);
 }
 
 formAddCardElement.addEventListener("submit", function (event) {
   closePopup(cardAdd);
   event.preventDefault();
-  createCard(cardNameFieldElement.value, linkFieldElement.value, cardTemplate, imagePopupClick, ulCards);
+  createCard(cardNameFieldElement.value, linkFieldElement.value, cardTemplate, handleCardClick, ulCards);
 
   formAddCardElement.reset();
-  const inputList = Array.from(formAddCardElement.querySelectorAll('.popup__input'));
-  const buttonElement = formAddCardElement.querySelector('.popup__button');
   addCardFormValidator.toggleButtonState();
 }); /* попап-форма для добавления карточки */
 

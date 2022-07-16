@@ -1,13 +1,13 @@
 export default class Card {
-  constructor(name, link, templateSelector, imageClickFunction){
+  constructor(name, link, templateSelector, handleCardClick){
     this.name = name;
     this.link = link;
     this.templateSelector = templateSelector;
-    this.cardLi = this.templateSelector.querySelector(".elements__card").cloneNode(true);
-    this._image = this.cardLi.querySelector(".elements__image")
-    this._trashButtonLi = this.cardLi.querySelector(".elements__trash-button");
-    this._buttonLike = this.cardLi.querySelector(".elements__like-button");
-    this._imageClickFunction = imageClickFunction;
+    this.cardElement = this.templateSelector.querySelector(".elements__card").cloneNode(true);
+    this._image = this.cardElement.querySelector(".elements__image")
+    this._trashButtonLi = this.cardElement.querySelector(".elements__trash-button");
+    this._buttonLike = this.cardElement.querySelector(".elements__like-button");
+    this._handleCardClick = handleCardClick;
   }
 
   _setFields(){
@@ -16,13 +16,13 @@ export default class Card {
   }
 
   _setTitle(){
-    this.cardLi.querySelector(".elements__title").textContent = this.name;
+    this.cardElement.querySelector(".elements__title").textContent = this.name;
   }
 
   _setEventListeners(){
 
     this._image.addEventListener("click", () => {
-      this._imageClickFunction(this.name, this.link);
+      this._handleCardClick(this.name, this.link);
     });
 
     this._trashButtonLi.addEventListener("click", () => {
@@ -42,6 +42,6 @@ export default class Card {
 
     this._setEventListeners();
   
-    return this.cardLi;
+    return this.cardElement;
   }
 }
